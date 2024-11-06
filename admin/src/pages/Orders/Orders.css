@@ -3,13 +3,14 @@
     grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
     align-items: start;
     gap: 20px;
-    border: 1px solid tomato;
+    border: 1px solid #ff6347; /* Softer tomato shade */
     margin: 30px 0;
     padding: 20px;
     font-size: 14px;
     color: #505050;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    background-color: #fafafa; /* Slightly lighter background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .order-item-food, .order-item-name {
@@ -17,27 +18,26 @@
 }
 
 .order-item-name {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 15px 0 10px;
     font-size: 16px;
-    color: #333;
+    color: #333333;
 }
 
 .order-item-address {
     margin-bottom: 15px;
     font-size: 13px;
-    color: #777;
+    color: #777777;
 }
 
 .order-item select {
     background-color: #ffe8ef;
-    border: 1px solid tomato;
-    border-radius: 5px;
+    border: 1px solid #ff6347; /* Softer tomato shade */
+    border-radius: 6px;
     padding: 10px;
     font-size: 14px;
-    width: 120px;
+    width: 180px; /* Increased width */
     max-width: 100%;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .order-item select:focus {
@@ -53,14 +53,16 @@
 @media (max-width: 768px) {
     .order-item {
         grid-template-columns: 1fr 1fr;
+        gap: 15px;
     }
 
     .order-item select {
-        width: 100%;
+        width: 100%; /* Full width on smaller screens */
+        padding: 10px;
     }
 }
+
 @media (max-width: 600px) {
-    /* Adjust the order-item grid layout for smaller screens */
     .order-item {
         grid-template-columns: 1fr; /* Single column layout */
         gap: 15px; /* Reduce gap between items */

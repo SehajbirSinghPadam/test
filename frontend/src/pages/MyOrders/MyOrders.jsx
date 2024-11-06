@@ -21,6 +21,12 @@ const MyOrders = () => {
     useEffect(() => {
         if (token) {
             fetchOrders();
+
+            // Set up a timer to refresh orders every minute
+            const interval = setInterval(fetchOrders, 2000); // 60000ms = 1 minute
+            
+            // Clear interval on component unmount
+            return () => clearInterval(interval);
         }
     }, [token]);
 
@@ -44,7 +50,7 @@ const MyOrders = () => {
                         <p>
                             <span>&#x25cf;</span> <b>{order.status}</b>
                         </p>
-                        <button onClick={fetchOrders}>  Track Order </button>
+                        <button onClick={fetchOrders}>Track Order</button>
                     </div>
                 ))}
             </div>
