@@ -1,0 +1,87 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 20px;
+    border: 1px solid tomato;
+    margin: 30px 0;
+    padding: 20px;
+    font-size: 14px;
+    color: #505050;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.order-item-food, .order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.order-item-address {
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+.order-item select {
+    background-color: #ffe8ef;
+    border: 1px solid tomato;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    width: 120px;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+.order-item select:focus {
+    outline: none;
+    border-color: #ff4b8b;
+    box-shadow: 0 0 5px rgba(255, 75, 139, 0.4);
+}
+
+.order-item select:hover {
+    background-color: #ffd1df;
+}
+
+@media (max-width: 768px) {
+    .order-item {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .order-item select {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    /* Adjust the order-item grid layout for smaller screens */
+    .order-item {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Reduce gap between items */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .order-item-name {
+        font-size: 18px; /* Make the name larger for readability */
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .order-item-address {
+        font-size: 14px; /* Slightly increase font size for better readability */
+        margin-bottom: 10px;
+    }
+
+    .order-item select {
+        width: 100%; /* Make the select element full width on mobile */
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+}
