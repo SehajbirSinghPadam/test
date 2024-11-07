@@ -5,16 +5,17 @@ import foodRouter from './routes/foodRoute.js';
 import userRouter from './routes/userRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
-//import 'dotenv/config';
-import 'dotenv/config';
+import dotenv from 'dotenv';
 
 // App configuration
+dotenv.config();
 const app = express();
 const port = process.env.PORT || 4000; // Using .env for port configuration
 
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
 
 // Database connection
 connectDb();
@@ -33,5 +34,7 @@ app.get("/", (req, res) => {
 
 // Start server
 app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`);
+    console.log(`Server started on localhost:${port}`);
 });
+
+
