@@ -1,44 +1,55 @@
-.header{
-    height: 34vw ;
-    margin:  30px auto;
-    background:url(../../assets/header_img.png) no-repeat;
-    background-size:contain;
-    position: relative ;
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url(../../assets/header_img.png) no-repeat;
+    background-size: contain;
+    position: relative;
+    background-color: #1a1a1a; /* Dark background for contrast */
 }
-.header-contents{
-    position:absolute;
+
+.header-contents {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-end; /* Aligns content to the right */
     gap: 1.5vw;
     max-width: 50%;
     bottom: 10%;
-    left: 6vw;
-    color: aliceblue;   
-    animation: fadeIn  5s  ;
+    right: 6vw; /* Align to the right side */
+    color: #f1f1f1; /* Light text color for readability */
+    animation: slideUp 2s ease-out forwards; /* Slide-up animation */
 }
-.header-contents h2{
-    font-weight: 500;
-    color: white;
-    font-size: max(4.5vw,22px);
 
+.header-contents h2 {
+    font-weight: 600; /* Slightly bolder text */
+    color: #fff; /* Pure white for main heading */
+    font-size: max(4.5vw, 22px);
+    text-align: right;
+    position: relative;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
-.header-contents p{
-    color: white;
+
+.header-contents p {
+    color: #dcdcdc; /* Lighter text for the paragraph */
     font-size: 1vw;
-
-}  
-.header-contents button{
-    border: none;
-    color: #747474;
-    font-weight: 500;
-    padding: 1vw 2.3vw ;
-    background-color: white;
-    font-size: max(1vw,13px);
-    border-radius: 50px;
-
+    text-align: right;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
 
+/* Button Styling */
+.header-contents button {
+    border: none;
+    color: #ffffff; /* White text for button */
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: #ff6f61; /* Warm coral color for button */
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
 /* Styles for medium screens (up to 1050px) */
 @media (max-width: 1050px) {
@@ -52,23 +63,35 @@
     .header-contents {
         max-width: 65%;
     }
-    
+
     .header-contents p {
         display: none;
     }
-    
+
     .header-contents button {
         padding: 2vw 4vw;
     }
 }
 
-/* Styles for extra small screens (up to 500px, for example) */
+/* Styles for extra small screens (up to 500px) */
 @media (max-width: 500px) {
     .header-contents {
-        max-width: 80%; /* Further adjust for smaller screens */
+        max-width: 80%;
     }
 
     .header-contents button {
-        padding: 3vw 6vw; /* Adjust padding for small devices */
+        padding: 3vw 6vw;
+    }
+}
+
+/* Keyframe animation for slide-up */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

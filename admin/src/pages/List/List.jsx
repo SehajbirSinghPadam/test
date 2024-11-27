@@ -36,7 +36,14 @@ const removeFood =async(foodId) =>{
 
   return (
     <div className="list add flex-col">
-      <p>All Foods List</p>
+      <p style={{
+          textAlign: 'center',
+          fontSize: '53px',
+          position: 'relative',
+          margin: '0 auto',
+          transition: 'transform 0.3s ease, fontSize 0.3s ease',
+          color:"teal"
+        }} >All Foods List</p>
       <div className="list-table">
         <div className="list-table-format title">
           <b>Image</b>
@@ -53,9 +60,22 @@ const removeFood =async(foodId) =>{
                   src={`${url}/images/${item.image}`}
                   alt={`${item.name} image`}
                 />
-                <p>{item.name}</p>
-                <p>{item.category}</p>
-                <p>${item.price}</p>
+                <p style={{
+                  color: "Black",
+                  fontSize: '20px'
+                }} > <b>{item.name}</b></p>
+                <p
+                style={{
+                  color: "Black",
+                  fontSize: '20px'
+                }}
+                >{item.category}</p>
+                <p
+                style={{
+                  color: "Black",
+                  fontSize: '20px'
+                }}
+                >₹ {item.price} /-</p>
                 <p onClick={()=>removeFood(item._id)} className="cursor" >
                   {/* Add functionality for the "X" button here, e.g., delete */}
                   X

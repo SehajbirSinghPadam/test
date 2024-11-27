@@ -63,7 +63,16 @@ const Orders = ({ url }) => {
 
   return (
     <div className="order add">
-      <h3>Order Page</h3>
+      <h3
+        style={{
+          textAlign: 'center',
+          fontSize: '53px',
+          position: 'relative',
+          margin: '0 auto',
+          transition: 'transform 0.3s ease, fontSize 0.3s ease',
+          color:"teal"
+        }}
+      >Order Page</h3>
       <div className="order-list">
         {orders.length === 0 ? (
           <div>No orders available.</div>

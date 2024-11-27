@@ -12,7 +12,7 @@ const Add = ({url}) => {
     name: "",
     description: "",
     price: "",
-    category: "Salad",
+    category: "Restaurant",
   });
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -59,6 +59,16 @@ const Add = ({url}) => {
 
   return (
     <div className="add">
+      <div style={{
+          textAlign: 'center',
+          fontSize: '53px',
+          position: 'relative',
+          margin: '0 auto',
+          transition: 'transform 0.3s ease, fontSize 0.3s ease',
+          color:"teal"
+        }}>
+        ADD PRODUCT  
+      </div>
       <form className="flex-col" onSubmit={onSubmitHandler}>
         <div className="add-img-upload flex-col ">
           <p>Upload Image</p>
@@ -112,14 +122,14 @@ const Add = ({url}) => {
               name="category"
               required
             >
-              <option value="Salad">Salad</option>
-              <option value="Rolls">Rolls</option>
-              <option value="Deserts">Deserts</option>
-              <option value="Sandwich">Sandwich</option>
-              <option value="Cake">Cake</option>
-              <option value="Pure Veg">Pure Veg</option>
-              <option value="Pasta">Pasta</option>
-              <option value="Noodles">Noodles</option>
+              <option value="Restaurant">Restaurant</option>
+              <option value="Ice">Ice Cream</option>
+              <option value="Veg Table">Veg Table</option>
+              <option value="Medicine">Medicine</option>
+              <option value="Fruits">Fruits</option>
+              <option value="Books">Books</option>
+              <option value="Beverages">Beverages</option>
+
             </select>
           </div>
 

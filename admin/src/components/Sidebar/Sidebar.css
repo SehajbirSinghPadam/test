@@ -3,7 +3,7 @@
     --border-color: #a9a9a9;
     --bg-color: #f9f9f9;
     --hover-bg-color: #e6e6e6;
-    --active-bg-color: tomato;
+    --active-bg-color: rgba(201, 16, 118, 0.753);
     --active-text-color: white;
     --hover-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     --transition-duration: 0.3s;

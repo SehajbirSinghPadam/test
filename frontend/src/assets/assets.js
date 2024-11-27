@@ -10,6 +10,13 @@ import menu_5 from './menu_5.png'
 import menu_6 from './menu_6.png'
 import menu_7 from './menu_7.png'
 import menu_8 from './menu_8.png'
+import menu_99 from './menu_99.jpg'
+import menu_11 from './menu_11.jpg'
+import menu_50 from './menu_50.jpg'
+import menu_51 from './menu_51.jpg'
+import menu_52 from './menu_52.jpg'
+import menu_555 from './menu_555.png'
+import menu_554 from './menu_554.jpg'
 
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -43,6 +50,7 @@ import food_29 from './food_29.png'
 import food_30 from './food_30.png'
 import food_31 from './food_31.png'
 import food_32 from './food_32.png'
+
 
 import add_icon_white from './add_icon_white.png'
 import add_icon_green from './add_icon_green.png'
@@ -84,37 +92,35 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
-        menu_image: menu_1
+        menu_name: "Restaurant",
+        menu_image: menu_50
     },
+    
     {
-        menu_name: "Rolls",
-        menu_image: menu_2
-    },
-    {
-        menu_name: "Deserts",
+        menu_name: "Ice",
         menu_image: menu_3
     },
     {
-        menu_name: "Sandwich",
-        menu_image: menu_4
+        menu_name: "Veg Table",
+        menu_image: menu_555
     },
     {
-        menu_name: "Cake",
+        menu_name: "Medicine",
+        menu_image: menu_52
+    },
+    {
+        menu_name: "Fruits",
+        menu_image: menu_554
+    },
+    {
+        menu_name: "Books",
         menu_image: menu_5
     },
     {
-        menu_name: "Pure Veg",
+        menu_name: "Beverages",
         menu_image: menu_6
     },
-    {
-        menu_name: "Pasta",
-        menu_image: menu_7
-    },
-    {
-        menu_name: "Noodles",
-        menu_image: menu_8
-    }]
+  ]
 
 export const food_list = [
     {

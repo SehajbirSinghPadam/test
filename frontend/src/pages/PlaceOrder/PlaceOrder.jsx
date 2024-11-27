@@ -71,7 +71,9 @@ const PlaceOrder = () => {
   return (
     <form onSubmit={placeOrder} className="place-order">
       <div className="place-order-left">
-        <p className="title">Delivery information</p>
+        <p className="title"> Customer Delivery Info</p>
+        <p>Enter Correct Information </p>
+        <br />
         <div className="multi-fields">
           <input
             required

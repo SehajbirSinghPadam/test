@@ -3,7 +3,7 @@ import userModel from "../models/userModel.js";
 import Stripe from "stripe";
 
 // Initialize Stripe with your secret key
-const stripe = new Stripe('sk_test_51QAqzrCKBTlswIftcrYzRhqBPuT4z9pJqekcTl5cU284F47OIUg7jIFgqYyOIU4SiymWRrqNEsfLGxAJMTmNxLRO002KEgu7fa');
+const stripe = new Stripe('sk_test_51QOXGdAteoGm6wfcYRV2ZNMe9hunlRgZHC1fK2kMVwwPYjtePeyzHTtMUYhHDD6abe4peZl6VvjO4oIFdojUy7tQ00z0OA5MQN');
 
 // Place the Order from the user from the Front end
 const placeOrder = async (req, res) => {

@@ -14,3 +14,22 @@
     gap: 30px;
     row-gap: 50px;
 }
+.line {
+    text-align: center;
+    animation: smooth-blink 4s infinite;
+}
+
+@keyframes smooth-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@supports (animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1)) {
+    .line {
+        animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    }
+}

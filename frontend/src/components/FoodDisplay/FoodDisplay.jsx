@@ -8,7 +8,7 @@ const FoodDisplay = ({ category }) => { // Destructure category from props
 
   return (
     <div className="food-display" id="food-display">
-      <h2> Top dishes near you </h2>
+      <h2 class="line">   Signature Dishes We Serve !!! </h2>
       <div className="food-display-list">
         {food_list.map((item, index) => {
           console.log(category, item.category);

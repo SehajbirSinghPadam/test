@@ -1,107 +1,149 @@
-.navbar{
+.navbar {
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
-.navbar .logo{
+.navbar .logo {
     width: 150px;
 }
-.navbar-menu{
+
+.navbar-menu {
     display: flex;
     list-style: none;
     gap: 20px;
     color: #49557e;
-    font-size: 18 ;
+    font-size: 18px;
 }
+
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 40px;
-
 }
-.navbar button{
+
+.navbar button {
     background: transparent;
     font-size: 16px;
     color: #49557e;
-    border: 1px solid tomato;
-    padding: 10px 30px;
-    border-radius:50px ;
+    border: 1px solid rgb(80, 255, 71);
+    padding: 10px; /* Adjust padding to make the button square */
+    width: 150px; /* Set a specific width */
+    height: 50px; /* Set the height equal to the width */
+    border-radius: 0; /* Remove the rounded corners */
     cursor: pointer;
     transition: 0.4s;
+    display: inline-flex; /* Ensures proper alignment */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+}
 
+.navbar button:hover {
+    background-color: #f5fff2;
 }
-.navbar button:hover{
-    background-color: #fff4f2;
-}
-.navbar .active{
+
+.navbar .active {
     padding-bottom: 2px;
-    border-bottom: 2px solid #49557e ;
+    border-bottom: 2px solid #49557e;
 }
-.navbar li{
-    cursor: pointer;
 
+.navbar li {
+    cursor: pointer;
 }
-.navbar-search-icon{
+
+.navbar-search-icon {
     position: relative;
 }
-.navbar-search-icon .dot{
+
+.navbar-search-icon .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato ;
+    background-color: rgb(21, 188, 18);
     border-radius: 5px;
     top: -8px;
     right: -8px;
-}  
-.navbar-profile{
-    position: relative;
-     /* Ensure that it doesn't disrupt the layout */
+    animation: blink 1s infinite; /* Apply the blinking animation */
 }
 
-.nav-profile-dropdown{
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Hidden */
+    }
+}
+
+.navbar-profile {
+    position: relative; /* Ensures that it doesn't disrupt the layout */
+}
+
+.nav-profile-dropdown {
     position: absolute;
     display: none; /* Initially hidden */
-    
     right: 0;
-    
-    /* Adds shadow for better visibility */
     z-index: 1;
-    
-    
+    flex-direction: column;
+    gap: 10px; /* Adds space between dropdown items */
+    background-color: rgba(240, 255, 240, 0.95); /* Light greenish-white background */
+    padding: 15px 30px; /* Balanced padding for content */
+    border-radius: 8px; /* Smooth rounded corners for a modern feel */
+    border: 1px solid rgb(34, 139, 34); /* Darker green border for style */
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.2); /* Adds a green-tinted shadow for depth */
+    outline: none; /* Removed outline for a cleaner look */
+    list-style: none; /* No bullet points for list items */
+    transition: all 0.3s ease-in-out; /* Smooth hover transition effect */
+    z-index: 10; /* Ensures dropdown appears above other elements */
+    opacity: 0; /* Initially invisible for smooth transition */
+    visibility: hidden; /* Hidden by default */
 }
 
-/* Show the dropdown when hovering over the profile section */
 .navbar-profile:hover .nav-profile-dropdown {
     display: flex;
-    flex-direction: column;
-    gap: 10px; /* Add space between items */
-    background-color: #fff2ef; /* Light background to match design */
-    padding: 12px 25px;border-radius: 4px; /* Optional: for rounded corners */
-    border: 1px solid tomato; /* Border to match your design */
-    outline: 2px solid white; /* Adds an outline for contrast */
-    list-style: none; /* Remove bullet points */
-
+    opacity: 1;
+    visibility: visible; /* Make visible only on hover */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-
-
-/* Styling for the dropdown items */
+/* Dropdown item styling */
 .nav-profile-dropdown li {
     display: flex;
     align-items: center;
-    gap: 20px; 
- 
+    gap: 20px; /* Space between icon and text */
+    padding: 10px 15px; /* Adds padding inside items */
+    border-radius: 4px; /* Slightly rounded item corners */
+    color: #2e8b57; /* Text color in green shades */
+    background-color: rgba(255, 255, 255, 0.9); /* Subtle white background for items */
     cursor: pointer; /* Makes the items clickable */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.nav-profile-dropdown img{
-    width: 20px;
+
+/* Hover effect for dropdown items */
+.nav-profile-dropdown li:hover {
+    background-color: rgb(34, 139, 34); /* Dark green background on hover */
+     /* White text on hover for contrast */
 }
-.nav-profile-dropdown li:hover{
-    color: tomato;
+
+/* Styling for icons inside dropdown items */
+.nav-profile-dropdown img {
+    width: 20px; /* Icon size */
+    border-radius: 50%; /* Optional: for circular icons */
+    transition: transform 0.3s ease; /* Add slight animation to icons */
 }
+
+/* Hover effect for icons */
+.nav-profile-dropdown li:hover img {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Additional hover color for text */
+.nav-profile-dropdown li:hover {
+    color:azure
+     /* White text on hover */
+}
+
 
 
 
